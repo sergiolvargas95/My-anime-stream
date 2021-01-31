@@ -20,6 +20,11 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+main {
+    width: 100%;
+    height: auto;
+}
+
 .title {
     font-size: 0.8rem;
     margin: 20px 0 5px 20px;
@@ -151,12 +156,25 @@ body {
     transform: translate3d(40px, 0, 0);
 }
 
+.carrousel-item-recent:hover ~ .carrousel-item-recent{
+    transform: translate3d(40px, 0, 0);
+}
+
+.carrousel__container-recent:hover .carrousel-item-recent{
+    opacity: 0.3;
+}
+
 .carrousel__container:hover .carrousel-item{
     opacity: 0.3;
 }
 
 .carrousel__container:hover .carrousel-item:hover{
     transform: scale(1.2);
+    opacity: 1;
+}
+
+.carrousel__container-recent:hover .carrousel-item-recent:hover{
+    transform: scale(1.4);
     opacity: 1;
 }
 
@@ -201,4 +219,71 @@ body {
 .carrousel-item__details--title{
     font-weight: bold;
     font-size: 1rem;
+}
+
+.carrousel-recent {
+    height: 280px;
+    margin-top: 10px;
+    overflow: scroll;
+    padding-left: 20px;
+    position: relative;
+}
+
+.carrousel__container-recent {
+    white-space: nowrap;    /*Nos permite que los elementos se extiendan indefinidamente*/
+    margin-top: 40px;
+    height: 220px;
+}
+
+.carrousel-item-recent{
+    width: 100px;
+    height: 200px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+}
+
+.carrousel-item__img-recent{
+    border-radius: 20px;
+    width: 100px;
+    height: 170px;
+    object-fit: cover;    /*La imagen recupera su tamaño original*/
+}
+
+.carrousel-item__details-recent{
+    font-size: 1rem;
+    opacity: 1;
+    transition: 450ms opacity;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.principal-container {
+    width: 100%;
+    height: 500px;
+    min-width: 350px;
+}
+
+.principal-container p {
+    color: white;
+    font-size: 1rem;
+    margin: 0 0 10px 20px;
+    font-weight: bold;
+}
+
+.principal-container img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    min-width: 350px;
 }
