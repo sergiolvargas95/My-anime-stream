@@ -247,6 +247,10 @@ main {
     position: relative;
 }
 
+.carrousel-item-recent p {
+    font-size: 0.7rem;
+}
+
 .carrousel-item__img-recent{
     border-radius: 20px;
     width: 100px;
